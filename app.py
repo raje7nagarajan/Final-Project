@@ -127,7 +127,8 @@ def categorize_transaction(description):
         return "Others"
 
 # Initialize Groq client with your API key
-client = Groq(api_key="ADD SECRET KEY")
+#client = Groq(api_key="ADD SECRET KEY")
+client = os.getenv("GROQ_API_KEY")
 
 # Function to identify the spend analsyis
 def spend_analysis(df):
